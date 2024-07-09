@@ -211,9 +211,9 @@ const image_8bfe2b3f_d91d91a3_iconGeometry = new THREE.PlaneGeometry(1, 1);
     image_8bfe2b3f_d91d91a3.scale.set(0.3, 0.3, 0.3);
     image_8bfe2b3f_d91d91a3.position.set(0.33, -0.51, 0.04);
     image_8bfe2b3f_d91d91a3.rotation.set(-0.001, 0, 0);
+    image_8bfe2b3f_d91d91a3.userData.clickable = true
     
-    
-    
+    image_8bfe2b3f_d91d91a3.userData.eventName ="Blinkit"
 const image_4e483042_f6ff6fcb_iconGeometry = new THREE.PlaneGeometry(1, 1);
    const image_4e483042_f6ff6fcb_texture = await loadTexture("assets/crax-logo.jpg");
   const image_4e483042_f6ff6fcb_image = new THREE.MeshBasicMaterial({
@@ -225,7 +225,7 @@ const image_4e483042_f6ff6fcb_iconGeometry = new THREE.PlaneGeometry(1, 1);
     image_4e483042_f6ff6fcb.rotation.set(-0.001, 0, 0);
     image_4e483042_f6ff6fcb.userData.clickable = true
     
-    image_4e483042_f6ff6fcb.userData.eventName ="unknown"
+    image_4e483042_f6ff6fcb.userData.eventName ="Crax website"
       
        document.body.addEventListener("click", (e) => {
     const mouseX = (e.clientX / window.innerWidth) * 2 - 1;
@@ -272,6 +272,13 @@ const image_4e483042_f6ff6fcb_iconGeometry = new THREE.PlaneGeometry(1, 1);
 
       
       if (o.userData.clickable && o === video_asset_8c14c58a719) {
+        setTimeout(()=>{
+          window.location.href = "https://blinkit.com/s/?q=crax"
+        },100)
+        }
+      
+
+      if (o.userData.clickable && o === image_8bfe2b3f_d91d91a3) {
         setTimeout(()=>{
           window.location.href = "https://blinkit.com/s/?q=crax"
         },100)
